@@ -32,7 +32,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>Power BI Notes</h1>
-      <p class="subtitle">Structured learning plan and chapter content for Power BI — use the tabs to open each chapter.</p>
+      <p class="subtitle">Structured learning plan and topic content for Power BI — use the tabs to open each topic.</p>
       <div class="meta">
         <span>Source: information_reference.txt</span>
         <span>Mode: static pages</span>
@@ -51,8 +51,19 @@
   </div>
 
   <script>
-    const files = [];
-    for (let i=1;i<=18;i++){ files.push({label:`Chapter ${i}`, path:`powerbi_simple.html#ch${i}`}); }
+    const files = [
+      { label: 'What is BI & Power BI', path: 'powerbi_simple.html#ch1' },
+      { label: 'Power BI Interface', path: 'powerbi_simple.html#ch2' },
+      { label: 'Data Loading', path: 'powerbi_simple.html#ch3' },
+      { label: 'Power Query Basics', path: 'powerbi_simple.html#ch4' },
+      { label: 'Data Transformation & Modeling', path: 'powerbi_simple.html#ch5' },
+      { label: 'Basic & Advanced Visuals', path: 'powerbi_simple.html#ch6' },
+      { label: 'Dashboard Design', path: 'powerbi_simple.html#ch7' },
+      { label: 'What is DAX & Aggregations', path: 'powerbi_simple.html#ch8' },
+      { label: 'Time Intelligence', path: 'powerbi_simple.html#ch9' },
+      { label: 'Filters, Context & Performance', path: 'powerbi_simple.html#ch10' },
+      { label: 'Building Dashboards & Interview Prep', path: 'powerbi_simple.html#ch11' }
+    ];
     const tabs = document.getElementById('tabs');
     const frame = document.getElementById('noteFrame');
     const title = document.getElementById('viewerTitle');

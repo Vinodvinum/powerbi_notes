@@ -287,6 +287,35 @@
       border-bottom: none;
     }
 
+    .visual-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .visual-card {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .visual-card figcaption {
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      background: var(--surface);
+    }
+
     .footer-note {
       padding: 28px 0 40px;
       color: var(--muted);
@@ -709,6 +738,24 @@
             <div class="answer">
               <h4>Interview Answer</h4>
               <p>Choose visuals based on the business question. Bar charts compare categories, line charts show trends, pie charts show distribution, scatter plots show correlations, and maps show geographic data.</p>
+            </div>
+
+            <div class="step">
+              <h4>Visual examples</h4>
+              <div class="visual-gallery">
+                <figure class="visual-card">
+                  <img src="https://placehold.co/420x240/156d63/ffffff?text=Bar+Chart" alt="Bar chart example" />
+                  <figcaption>Bar chart: compare categories like sales by city.</figcaption>
+                </figure>
+                <figure class="visual-card">
+                  <img src="https://placehold.co/420x240/bf5a2a/ffffff?text=Line+Chart" alt="Line chart example" />
+                  <figcaption>Line chart: show trend over time.</figcaption>
+                </figure>
+                <figure class="visual-card">
+                  <img src="https://placehold.co/420x240/0f7d69/ffffff?text=Pie+Chart" alt="Pie chart example" />
+                  <figcaption>Pie chart: show composition of a whole.</figcaption>
+                </figure>
+              </div>
             </div>
 
             <div class="practice">
