@@ -44,7 +44,7 @@
     <section class="viewer">
       <div class="viewer-head">
         <p class="viewer-title" id="viewerTitle"></p>
-        <a class="open-link" id="openLink" href="powerbi_content.html" target="_blank" rel="noopener noreferrer">Open content</a>
+        <a class="open-link" id="openLink" href="powerbi_simple.html" target="_blank" rel="noopener noreferrer">Open full page</a>
       </div>
       <iframe id="noteFrame" title="Power BI viewer"></iframe>
     </section>
@@ -52,40 +52,14 @@
 
   <script>
     const files = [];
-    for (let i=1;i<=18;i++){
-      const label = `Chapter ${i}`;
-      const path = `powerbi_content.html#ch${i}`;
-      files.push({label, path});
-    }
-
+    for (let i=1;i<=18;i++){ files.push({label:`Chapter ${i}`, path:`powerbi_simple.html#ch${i}`}); }
     const tabs = document.getElementById('tabs');
     const frame = document.getElementById('noteFrame');
     const title = document.getElementById('viewerTitle');
     const openLink = document.getElementById('openLink');
-
-    function setActive(index){
-      const selected = files[index];
-      frame.src = selected.path;
-      title.textContent = `Viewing: ${selected.label}`;
-      openLink.href = selected.path;
-      const buttons = tabs.querySelectorAll('button');
-      buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index));
-      const url = new URL(window.location.href);
-      url.hash = 'file='+encodeURIComponent(selected.path);
-      history.replaceState(null,'',url);
-    }
-
-    files.forEach((file,index)=>{
-      const btn = document.createElement('button');
-      btn.type='button'; btn.className='tab-btn'; btn.textContent=file.label;
-      btn.addEventListener('click',()=>setActive(index)); tabs.appendChild(btn);
-    });
-
-    const hash = window.location.hash || '';
-    const match = hash.match(/file=([^&]+)/);
-    const requested = match ? decodeURIComponent(match[1]) : '';
-    const initial = files.findIndex(f=>f.path===requested);
-    setActive(initial>=0?initial:0);
+    function setActive(index){ const selected = files[index]; frame.src = selected.path; title.textContent = `Viewing: ${selected.label}`; openLink.href = selected.path; const buttons = tabs.querySelectorAll('button'); buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index)); const url = new URL(window.location.href); url.hash = 'file='+encodeURIComponent(selected.path); history.replaceState(null,'',url); }
+    files.forEach((file,index)=>{ const btn = document.createElement('button'); btn.type='button'; btn.className='tab-btn'; btn.textContent=file.label; btn.addEventListener('click',()=>setActive(index)); tabs.appendChild(btn); });
+    const hash = window.location.hash || ''; const match = hash.match(/file=([^&]+)/); const requested = match ? decodeURIComponent(match[1]) : ''; const initial = files.findIndex(f=>f.path===requested); setActive(initial>=0?initial:0);
   </script>
 </body>
 </html>

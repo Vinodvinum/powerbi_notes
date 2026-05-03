@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI Notes Simple Style</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #2c3e50;
+      background: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #667eea;
+    }
+
+    .section.alt h2 {
+      border-bottom-color: #764ba2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #667eea;
+    }
+
+    .card.alt {
+      border-left-color: #764ba2;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      font-size: 1rem;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      color: #667eea;
+    }
+
+    .card.span-6 {
+      grid-column: span 6;
+    }
+
+    .card.span-4 {
+      grid-column: span 4;
+    }
+
+    .card.span-12 {
+      grid-column: span 12;
+    }
+
+    .chapter {
+      background: white;
+      border-left: 4px solid #667eea;
+    }
+
+    .chapter.alt {
+      border-left-color: #764ba2;
+    }
+
+    pre {
+      background: #f4f4f4;
+      border-left: 3px solid #667eea;
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-size: 0.95rem;
+      font-family: "Monaco", "Courier New", monospace;
+    }
+
+    code {
+      color: #2c3e50;
+    }
+
+    .answer, .practice, .step, .story {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .answer {
+      background: #e8f5e9;
+      border-left: 3px solid #4caf50;
+      color: #2e7d32;
+    }
+
+    .practice {
+      background: #fff3e0;
+      border-left: 3px solid #ff9800;
+      color: #e65100;
+    }
+
+    .step {
+      background: #e3f2fd;
+      border-left: 3px solid #2196f3;
+      color: #1565c0;
+    }
+
+    .story {
+      background: #f3e5f5;
+      border-left: 3px solid #9c27b0;
+      color: #6a1b9a;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      background: #667eea;
+      color: white;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .data-table tr:hover {
+      background: #f5f5f5;
+    }
+
+    @media (max-width: 768px) {
+      .card.span-6,
+      .card.span-4 {
+        grid-column: span 12;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Power BI Notes</h1>
+    <p class="subtitle">Complete guide to Power BI for Data Analysts — Simple, Practical, Interview-Ready</p>
+  </header>
+
+  <main>
+    <!-- PHASE 1: FOUNDATION -->
+    <section class="section" id="phase1">
+      <h2>Phase 1: Foundation — Understanding BI</h2>
+
+      <div class="grid">
+        <article class="card chapter span-12">
+          <h3>Chapter 1: What is BI & Power BI</h3>
+          
+          <h4>🧠 What is Business Intelligence?</h4>
+          <p>BI = Business Intelligence. Meaning: <strong>Using data to make better business decisions.</strong></p>
+
+          <h4>🏢 Real Story (Amazon Analyst)</h4>
+          <p>You work at Amazon. Manager asks: "How are our sales performing?"</p>
+          <p>You have raw data:</p>
+          <pre><code>order_id   amount    city
+1          5000      Bangalore
+2          3000      Mysore</code></pre>
+
+          <h4>❗ Problem</h4>
+          <p>If you show this table → Manager won't understand quickly. Too much raw data.</p>
+
+          <h4>💡 Solution = BI</h4>
+          <p>Instead show:</p>
+          <ul>
+            <li>Total Sales → ₹8000</li>
+            <li>Top City → Bangalore</li>
+            <li>Trend → Increasing</li>
+          </ul>
+
+          <h4>📊 What is Power BI?</h4>
+          <p>Power BI is a tool used to create reports and dashboards from data.</p>
+          <pre><code>SQL = get data
+Power BI = show data visually</code></pre>
+
+          <h4>🎯 Example Dashboard</h4>
+          <ul>
+            <li>📊 Bar chart → sales by city</li>
+            <li>📈 Line chart → monthly trend</li>
+            <li>🔢 Card → total revenue</li>
+          </ul>
+
+          <div class="answer"><strong>Answer:</strong> BI is converting raw data into meaningful insights. Power BI is the tool that helps create visual dashboards for business decisions.</div>
+
+          <h4>🎤 Interview Answer</h4>
+          <p>"What is Power BI?"</p>
+          <div class="answer">Power BI is a business intelligence tool used to transform raw data into interactive dashboards and visual reports, helping businesses make data-driven decisions.</div>
+
+          <h4>🧪 Practice Questions</h4>
+          <div class="practice"><strong>Q1:</strong> Why can't we just use Excel tables?</div>
+          <div class="answer"><strong>Ans:</strong> Excel is limited to small datasets. Power BI handles larger data, real-time updates, and professional dashboards.</div>
+          <div class="practice"><strong>Q2:</strong> What is the difference between SQL and Power BI?</div>
+          <div class="answer"><strong>Ans:</strong> SQL gets data. Power BI visualizes it. Both are needed.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 2: Power BI Interface (VERY IMPORTANT)</h3>
+          
+          <h4>🖥️ Main Interface Sections</h4>
+
+          <h4>1️⃣ Report View</h4>
+          <p>Where you create charts and dashboards (most used).</p>
+
+          <h4>2️⃣ Fields Pane</h4>
+          <p>Shows tables and columns. Example:</p>
+          <pre><code>customers.name
+orders.amount
+products.category</code></pre>
+
+          <h4>3️⃣ Visualizations Pane</h4>
+          <p>Used to create charts: Bar, Line, Pie, Table</p>
+
+          <h4>4️⃣ Filters Pane</h4>
+          <p>Filter data by conditions (city, date, etc.)</p>
+
+          <h4>🧠 3 Important Views</h4>
+          <ul>
+            <li><strong>Report View:</strong> Build visuals</li>
+            <li><strong>Data View:</strong> See raw data like table</li>
+            <li><strong>Model View:</strong> Create relationships</li>
+          </ul>
+
+          <div class="answer"><strong>Answer:</strong> Power BI has Report View for visuals, Data View for inspection, and Model View for relationships.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> Where do you create charts?</div>
+          <div class="answer"><strong>Ans:</strong> Report View</div>
+          <div class="practice"><strong>Q2:</strong> Where do you connect tables?</div>
+          <div class="answer"><strong>Ans:</strong> Model View</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 3: Data Loading (Get Data)</h3>
+          
+          <h4>📥 How to Load Data</h4>
+
+          <h4>Option 1: Import Excel / CSV</h4>
+          <pre><code>Get Data → Excel
+Browse file → Select sheet
+Load</code></pre>
+
+          <h4>Option 2: Connect Database</h4>
+          <pre><code>Get Data → SQL Server
+Enter server name
+Select database & table</code></pre>
+
+          <h4>🧠 Data Preview</h4>
+          <p>Before loading, preview data to check:</p>
+          <ul>
+            <li>Column names</li>
+            <li>Data types</li>
+            <li>Missing values</li>
+          </ul>
+
+          <div class="answer"><strong>Answer:</strong> Load data from Excel, CSV, or databases. Preview before loading to catch issues early.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> Where do you preview data?</div>
+          <div class="answer"><strong>Ans:</strong> In the Get Data dialog before clicking Load</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHASE 2: DATA PREPARATION -->
+    <section class="section alt" id="phase2">
+      <h2>Phase 2: Data Preparation — Power Query</h2>
+
+      <div class="grid">
+        <article class="card chapter span-6">
+          <h3>Chapter 4: Power Query Basics</h3>
+          
+          <h4>🧹 Data Cleaning Steps</h4>
+
+          <h4>Step 1: Remove Nulls</h4>
+          <pre><code>Select column → Right-click
+Remove Errors → Remove Blank Rows</code></pre>
+
+          <h4>Step 2: Change Data Types</h4>
+          <pre><code>Select column → Data Type dropdown
+Change Text → Date
+Change Number → Currency</code></pre>
+
+          <h4>Step 3: Rename Columns</h4>
+          <pre><code>Right-click column header → Rename
+customer_id → Customer ID</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Power Query removes nulls, fixes data types, and renames columns for clean data.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> How to remove blank rows?</div>
+          <div class="answer"><strong>Ans:</strong> Select column → Right-click → Remove Errors → Remove Blank Rows</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 5: Data Transformation</h3>
+          
+          <h4>🔧 Transform Steps</h4>
+
+          <h4>Split Columns</h4>
+          <pre><code>Select column → Split Column
+By Delimiter → Choose (space, comma, etc.)</code></pre>
+
+          <h4>Merge Columns</h4>
+          <pre><code>Select 2 columns → Merge Columns
+Choose delimiter</code></pre>
+
+          <h4>Create Calculated Column</h4>
+          <pre><code>Add Column → Custom Column
+Example: [First Name] & " " & [Last Name]</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Transform: split, merge, and create new columns for derived data.</div>
+        </article>
+
+        <article class="card chapter span-12">
+          <h3>Chapter 6: Data Modeling (VERY IMPORTANT)</h3>
+          
+          <h4>🔗 Relationships (Like SQL Joins)</h4>
+          <p>Connect tables so Power BI understands relationships.</p>
+
+          <h4>Star Schema Concept</h4>
+          <pre><code>Fact Table (center): fact_sales
+  ├── order_id
+  ├── customer_id
+  ├── amount
+  └── date
+
+Dimension Tables (around):
+  ├── dim_customers (customer_id, name, city)
+  ├── dim_products (product_id, name, category)
+  └── dim_date (date, month, year)</code></pre>
+
+          <h4>How to Create Relationships</h4>
+          <ol>
+            <li>Go to Model View</li>
+            <li>Drag customer_id from fact_sales to dim_customers</li>
+            <li>Select relationship type (1-to-many)</li>
+            <li>Click OK</li>
+          </ol>
+
+          <h4>Fact vs Dimension Tables</h4>
+          <table class="data-table">
+            <tr>
+              <th>Fact Table</th>
+              <th>Dimension Table</th>
+            </tr>
+            <tr>
+              <td>Contains measures (amount, quantity)</td>
+              <td>Contains attributes (name, city, category)</td>
+            </tr>
+            <tr>
+              <td>Many rows (transactions)</td>
+              <td>Few rows (master data)</td>
+            </tr>
+            <tr>
+              <td>Uses foreign keys</td>
+              <td>Uses primary keys</td>
+            </tr>
+          </table>
+
+          <div class="answer"><strong>Answer:</strong> Star schema: fact table in center, dimensions around it. Relationships connect them like SQL joins.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> What is a fact table?</div>
+          <div class="answer"><strong>Ans:</strong> Table with measurements (amount, count) that connects to dimensions</div>
+          <div class="practice"><strong>Q2:</strong> How to create relationship?</div>
+          <div class="answer"><strong>Ans:</strong> Model View → drag foreign key to primary key</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHASE 3: VISUALIZATION -->
+    <section class="section" id="phase3">
+      <h2>Phase 3: Visualization — Creating Visuals</h2>
+
+      <div class="grid">
+        <article class="card chapter span-6">
+          <h3>Chapter 7: Basic Visuals</h3>
+          
+          <h4>📊 Common Chart Types</h4>
+
+          <h4>1. Bar Chart</h4>
+          <pre><code>Best for: Comparing categories
+Example: Sales by city
+Drag: City → Axis, Amount → Value</code></pre>
+
+          <h4>2. Line Chart</h4>
+          <pre><code>Best for: Trends over time
+Example: Monthly sales trend
+Drag: Month → Axis, Amount → Value</code></pre>
+
+          <h4>3. Pie Chart</h4>
+          <pre><code>Best for: Composition (parts of whole)
+Example: Sales % by category
+Drag: Category → Legend, Amount → Value</code></pre>
+
+          <h4>4. Table</h4>
+          <pre><code>Best for: Showing details
+Example: Customer list
+Drag: columns → Columns area</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Choose visuals based on data story: comparison = bar, trend = line, composition = pie.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 8: Advanced Visuals</h3>
+          
+          <h4>🎯 Advanced Chart Types</h4>
+
+          <h4>1. KPI Card</h4>
+          <pre><code>Shows single metric
+Example: Total Revenue = ₹500000
+Use for: Key metrics</code></pre>
+
+          <h4>2. Map Visual</h4>
+          <pre><code>Geographic visualization
+Shows: Sales by region
+Requires: Location data (city, state)</code></pre>
+
+          <h4>3. Slicer</h4>
+          <pre><code>Interactive filter
+Users can click to filter all visuals
+Example: Filter by Month, City</code></pre>
+
+          <h4>4. Drill-down</h4>
+          <pre><code>Click on bar to see details
+Year → Month → Day hierarchy</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Advanced visuals: KPIs for metrics, maps for geography, slicers for filters, drill-down for hierarchy.</div>
+        </article>
+
+        <article class="card chapter span-12">
+          <h3>Chapter 9: Dashboard Design (VERY IMPORTANT)</h3>
+          
+          <h4>🎨 Design Principles</h4>
+
+          <h4>1. Layout</h4>
+          <ul>
+            <li>Most important KPI → Top-left</li>
+            <li>Main chart → Center</li>
+            <li>Details → Bottom-right</li>
+            <li>Slicers → Left side</li>
+          </ul>
+
+          <h4>2. Color Usage</h4>
+          <pre><code>Use 3-4 colors max
+Green = Good
+Red = Bad / Alert
+Blue = Neutral</code></pre>
+
+          <h4>3. Business Storytelling</h4>
+          <p>Dashboard should answer:</p>
+          <ul>
+            <li>What is the overall metric?</li>
+            <li>What is the trend?</li>
+            <li>Which category is top/bottom?</li>
+            <li>What action to take?</li>
+          </ul>
+
+          <h4>Example Dashboard Flow</h4>
+          <pre><code>Top-left: Total Revenue Card (₹500K)
+Top-right: KPI (Month % change: +15%)
+Center: Sales trend line chart
+Bottom-left: Top 5 products bar chart
+Bottom-right: Sales by city table</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Good dashboard: key metric first, clear story, limited colors, easy filters, actionable insights.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> Where should main KPI go?</div>
+          <div class="answer"><strong>Ans:</strong> Top-left (users' eye starts there)</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHASE 4: DAX -->
+    <section class="section alt" id="phase4">
+      <h2>Phase 4: DAX — Formulas & Measures</h2>
+
+      <div class="grid">
+        <article class="card chapter span-6">
+          <h3>Chapter 10: What is DAX</h3>
+          
+          <h4>🧮 DAX = Data Analysis Expression</h4>
+          <p>Language for creating calculations in Power BI.</p>
+
+          <h4>Calculated Column vs Measure</h4>
+          <table class="data-table">
+            <tr>
+              <th>Calculated Column</th>
+              <th>Measure</th>
+            </tr>
+            <tr>
+              <td>Computed row-by-row</td>
+              <td>Computed in filter context</td>
+            </tr>
+            <tr>
+              <td>Added to table</td>
+              <td>Not in table (only results)</td>
+            </tr>
+            <tr>
+              <td>Use rarely</td>
+              <td>Preferred for aggregations</td>
+            </tr>
+          </table>
+
+          <h4>Basic Measure Example</h4>
+          <pre><code>Total Sales = SUM(fact_sales[amount])</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> DAX creates measures (preferred) and calculated columns. Measures are evaluated at query time.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 11: Aggregations in DAX</h3>
+          
+          <h4>📊 Common Functions</h4>
+
+          <h4>SUM</h4>
+          <pre><code>Total Amount = SUM(fact_sales[amount])</code></pre>
+
+          <h4>AVERAGE</h4>
+          <pre><code>Avg Order = AVERAGE(fact_sales[amount])</code></pre>
+
+          <h4>COUNT</h4>
+          <pre><code>Total Orders = COUNT(fact_sales[order_id])</code></pre>
+
+          <h4>CALCULATE (Context Filter)</h4>
+          <pre><code>Sales Bangalore = CALCULATE(
+    [Total Sales],
+    dim_customers[city] = "Bangalore"
+)</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> SUM, AVERAGE, COUNT for basic aggregations. CALCULATE for conditional measures.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> How to sum filtered data?</div>
+          <div class="answer"><strong>Ans:</strong> Use CALCULATE with condition</div>
+        </article>
+
+        <article class="card chapter span-12">
+          <h3>Chapter 12: Time Intelligence</h3>
+          
+          <h4>⏰ Time-Based Calculations</h4>
+
+          <h4>YTD (Year-to-Date)</h4>
+          <pre><code>Sales YTD = CALCULATE(
+    [Total Sales],
+    DATESYTD(dim_date[date])
+)</code></pre>
+
+          <h4>MTD (Month-to-Date)</h4>
+          <pre><code>Sales MTD = CALCULATE(
+    [Total Sales],
+    DATESMTD(dim_date[date])
+)</code></pre>
+
+          <h4>Previous Month Comparison</h4>
+          <pre><code>Sales Last Month = CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR(dim_date[date])
+)</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Use DATESYTD, DATESMTD, SAMEPERIODLASTYEAR for time calculations. Need proper Date table.</div>
+
+          <h4>🧪 Practice</h4>
+          <div class="practice"><strong>Q1:</strong> How to calculate YTD?</div>
+          <div class="answer"><strong>Ans:</strong> Use DATESYTD function with CALCULATE</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHASE 5: ADVANCED ANALYTICS -->
+    <section class="section" id="phase5">
+      <h2>Phase 5: Advanced Analytics</h2>
+
+      <div class="grid">
+        <article class="card chapter span-6">
+          <h3>Chapter 13: Filters & Context (CRITICAL)</h3>
+          
+          <h4>🔍 Row Context vs Filter Context</h4>
+
+          <h4>Row Context</h4>
+          <p>In calculated columns (row-by-row evaluation)</p>
+
+          <h4>Filter Context</h4>
+          <p>In measures (aggregate based on filters)</p>
+
+          <h4>How Visuals Work</h4>
+          <pre><code>Slicer filters → Filter context
+→ Measures recalculate
+→ Visual updates</code></pre>
+
+          <div class="answer"><strong>Answer:</strong> Filters change measure results, not data. Understanding context is key to correct formulas.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 14: Drill-through & Interaction</h3>
+          
+          <h4>🔗 Cross Filtering</h4>
+          <p>Click on one visual → other visuals filter automatically</p>
+
+          <h4>Drill-down</h4>
+          <p>Click on bar → see detail (Year → Month → Day)</p>
+
+          <h4>Drill-through</h4>
+          <p>Click on value → navigate to detail page</p>
+
+          <div class="answer"><strong>Answer:</strong> Cross-filtering, drill-down, drill-through enable exploration and detail investigation.</div>
+        </article>
+
+        <article class="card chapter span-12">
+          <h3>Chapter 15: Performance Optimization</h3>
+          
+          <h4>⚡ Speed Up Your Dashboard</h4>
+
+          <h4>1. Data Model Optimization</h4>
+          <ul>
+            <li>Remove unused columns</li>
+            <li>Use appropriate data types (Integer not Text for numbers)</li>
+            <li>Minimize calculated columns (use measures instead)</li>
+          </ul>
+
+          <h4>2. Reduce Data Volume</h4>
+          <pre><code>Filter large tables in Power Query
+Example: Only last 2 years of data
+Not all historical data</code></pre>
+
+          <h4>3. Aggregation Tables</h4>
+          <p>Pre-aggregate data for faster queries on large datasets</p>
+
+          <div class="answer"><strong>Answer:</strong> Optimize model, reduce data, use measures over columns, aggregate when needed.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHASE 6: REAL PROJECT -->
+    <section class="section alt" id="phase6">
+      <h2>Phase 6: Real Project — Build Full Dashboard</h2>
+
+      <div class="grid">
+        <article class="card chapter span-12">
+          <h3>Chapter 16: Build Full Dashboard</h3>
+          
+          <h4>📊 Project: Sales Dashboard</h4>
+
+          <h4>Dashboard Components</h4>
+          <ol>
+            <li>KPI Card: Total Revenue</li>
+            <li>KPI Card: Total Orders</li>
+            <li>KPI Card: Avg Order Value</li>
+            <li>Line Chart: Sales Trend (monthly)</li>
+            <li>Bar Chart: Top 10 Products</li>
+            <li>Bar Chart: Sales by City</li>
+            <li>Map: Geographic distribution</li>
+            <li>Table: Customer insights</li>
+            <li>Slicers: Month, Year, City (for filters)</li>
+          </ol>
+
+          <h4>Step-by-Step</h4>
+          <ol>
+            <li>Load data (customers, orders, products)</li>
+            <li>Create relationships (order → customer, product)</li>
+            <li>Create measures (Total Sales, Avg Order)</li>
+            <li>Add visuals (KPIs, charts, map)</li>
+            <li>Add slicers for filtering</li>
+            <li>Format colors and layout</li>
+            <li>Test interaction and drill-down</li>
+            <li>Publish to Power BI Service</li>
+          </ol>
+
+          <div class="answer"><strong>Answer:</strong> Sales dashboard: combine KPIs, trends, comparisons, geography, and details with interactive slicers.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 17: Storytelling with Data</h3>
+          
+          <h4>🎤 How to Present Insights</h4>
+
+          <h4>Structure Your Story</h4>
+          <ol>
+            <li><strong>Headline:</strong> Key finding (e.g., "Sales up 15% this month")</li>
+            <li><strong>Context:</strong> Why it matters</li>
+            <li><strong>Evidence:</strong> Charts & data</li>
+            <li><strong>Action:</strong> What to do next</li>
+          </ol>
+
+          <h4>Example Narrative</h4>
+          <p>"Our sales reached ₹500K in March, up 15% from February. This growth came from the Bangalore region, which saw 40% increase. However, Mumbai sales declined. We recommend increased marketing in high-performing areas."</p>
+
+          <div class="answer"><strong>Answer:</strong> Lead with answer, show evidence, recommend action. Make it business-focused, not technical.</div>
+        </article>
+
+        <article class="card chapter span-6">
+          <h3>Chapter 18: Interview Preparation</h3>
+          
+          <h4>🎤 Common Interview Questions</h4>
+
+          <h4>Q1: Tell me about your dashboard project</h4>
+          <div class="answer">Answer: "I built a sales dashboard with KPIs, trends, and geographic analysis. It combines 3 tables with relationships. Users can filter by month and city. The dashboard helps management make quick decisions."</div>
+
+          <h4>Q2: How do you handle large datasets?</h4>
+          <div class="answer">Answer: "I optimize the model by removing unused columns, use aggregation tables, and filter unnecessary data in Power Query."</div>
+
+          <h4>Q3: What is DAX? Give an example</h4>
+          <div class="answer">Answer: "DAX is the formula language in Power BI. Example: Sales YTD = CALCULATE([Total Sales], DATESYTD(Date[Date]))"</div>
+
+          <h4>Q4: Explain star schema</h4>
+          <div class="answer">Answer: "Star schema has fact table (transactions) in center connected to dimension tables (customers, products, dates). It enables fast queries and clear relationships."</div>
+
+          <h4>Q5: How do relationships work?</h4>
+          <div class="answer">Answer: "Relationships connect fact tables to dimensions (like SQL joins). They define how data is aggregated and filtered across tables."</div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
