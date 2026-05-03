@@ -532,6 +532,77 @@
               </ul>
             </div>
 
+            <div class="step" style="margin: 20px 0; padding: 20px; border: 2px dashed #156d63; border-radius: 8px; background: #f0faf8;">
+              <h4 style="margin-top: 0; color: #156d63;">Power BI Report View Layout</h4>
+              <svg viewBox="0 0 1000 500" style="width: 100%; height: auto; border: 1px solid #156d63; border-radius: 4px; background: #ffffff;">
+                <!-- Filters Pane Left -->
+                <rect x="10" y="10" width="120" height="480" fill="#e8f3f0" stroke="#156d63" stroke-width="2" rx="4"/>
+                <text x="20" y="35" font-size="14" font-weight="bold" fill="#156d63">FILTERS</text>
+                <line x1="20" y1="40" x2="110" y2="40" stroke="#156d63" stroke-width="1"/>
+                <rect x="20" y="55" width="90" height="20" fill="#ffffff" stroke="#156d63" stroke-width="1" rx="2"/>
+                <text x="25" y="68" font-size="11" fill="#333">Region</text>
+                <rect x="20" y="85" width="90" height="20" fill="#ffffff" stroke="#156d63" stroke-width="1" rx="2"/>
+                <text x="25" y="98" font-size="11" fill="#333">Year</text>
+                <rect x="20" y="115" width="90" height="20" fill="#ffffff" stroke="#156d63" stroke-width="1" rx="2"/>
+                <text x="25" y="128" font-size="11" fill="#333">Category</text>
+
+                <!-- Canvas Center -->
+                <rect x="145" y="10" width="650" height="480" fill="#f9f9f9" stroke="#156d63" stroke-width="2" rx="4"/>
+                <text x="160" y="35" font-size="14" font-weight="bold" fill="#156d63">CANVAS (Your Dashboard)</text>
+                <line x1="160" y1="40" x2="770" y2="40" stroke="#156d63" stroke-width="1"/>
+                
+                <!-- Sample Chart on Canvas -->
+                <rect x="160" y="60" width="300" height="180" fill="#ffffff" stroke="#999" stroke-width="1" rx="3"/>
+                <text x="170" y="80" font-size="12" fill="#333">Sales by Region</text>
+                <line x1="170" y1="85" x2="450" y2="85" stroke="#999" stroke-width="1"/>
+                <!-- Bar chart representation -->
+                <rect x="180" y="110" width="15" height="100" fill="#156d63" rx="2"/>
+                <rect x="210" y="80" width="15" height="130" fill="#156d63" rx="2"/>
+                <rect x="240" y="120" width="15" height="90" fill="#156d63" rx="2"/>
+                <rect x="270" y="100" width="15" height="110" fill="#156d63" rx="2"/>
+                <text x="185" y="225" font-size="10" fill="#666">North</text>
+                <text x="215" y="225" font-size="10" fill="#666">South</text>
+                <text x="245" y="225" font-size="10" fill="#666">East</text>
+                <text x="275" y="225" font-size="10" fill="#666">West</text>
+
+                <!-- Another Chart -->
+                <rect x="475" y="60" width="300" height="180" fill="#ffffff" stroke="#999" stroke-width="1" rx="3"/>
+                <text x="485" y="80" font-size="12" fill="#333">Trend Over Time</text>
+                <line x1="485" y1="85" x2="765" y2="85" stroke="#999" stroke-width="1"/>
+                <!-- Line chart representation -->
+                <polyline points="495,160 540,120 585,140 630,80 675,100 710,60" fill="none" stroke="#156d63" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="495" cy="160" r="3" fill="#156d63"/>
+                <circle cx="540" cy="120" r="3" fill="#156d63"/>
+                <circle cx="585" cy="140" r="3" fill="#156d63"/>
+                <circle cx="630" cy="80" r="3" fill="#156d63"/>
+                <circle cx="675" cy="100" r="3" fill="#156d63"/>
+                <circle cx="710" cy="60" r="3" fill="#156d63"/>
+
+                <!-- Fields & Visualizations Pane Right -->
+                <rect x="805" y="10" width="185" height="480" fill="#e8f3f0" stroke="#156d63" stroke-width="2" rx="4"/>
+                <text x="815" y="35" font-size="13" font-weight="bold" fill="#156d63">FIELDS</text>
+                <line x1="815" y1="40" x2="975" y2="40" stroke="#156d63" stroke-width="1"/>
+                <rect x="815" y="55" width="155" height="18" fill="#ffffff" stroke="#156d63" stroke-width="1" rx="2"/>
+                <text x="820" y="66" font-size="10" fill="#333">📁 Sales Table</text>
+                <rect x="825" y="80" width="130" height="15" fill="#fff5e6" stroke="#999" stroke-width="1" rx="1"/>
+                <text x="830" y="90" font-size="10" fill="#333">∟ Region</text>
+                <rect x="825" y="100" width="130" height="15" fill="#fff5e6" stroke="#999" stroke-width="1" rx="1"/>
+                <text x="830" y="110" font-size="10" fill="#333">∟ Product</text>
+                <rect x="825" y="120" width="130" height="15" fill="#fff5e6" stroke="#999" stroke-width="1" rx="1"/>
+                <text x="830" y="130" font-size="10" fill="#333">∟ Sales</text>
+
+                <text x="815" y="170" font-size="13" font-weight="bold" fill="#156d63">VISUALIZATIONS</text>
+                <line x1="815" y1="175" x2="975" y2="175" stroke="#156d63" stroke-width="1"/>
+                <rect x="815" y="190" width="30" height="30" fill="#156d63" rx="2"/>
+                <text x="820" y="212" font-size="11" fill="#ffffff">📊</text>
+                <rect x="850" y="190" width="30" height="30" fill="#156d63" rx="2"/>
+                <text x="855" y="212" font-size="11" fill="#ffffff">📈</text>
+                <rect x="885" y="190" width="30" height="30" fill="#156d63" rx="2"/>
+                <text x="890" y="212" font-size="11" fill="#ffffff">🥧</text>
+                <text x="815" y="240" font-size="10" fill="#666">Bar  Line  Pie</text>
+              </svg>
+            </div>
+
             <div class="story">
               <h4>Real workflow</h4>
               <p>1. Drag "City" from Fields → Canvas</p>
@@ -744,15 +815,83 @@
               <h4>Visual examples</h4>
               <div class="visual-gallery">
                 <figure class="visual-card">
-                  <img src="https://placehold.co/420x240/156d63/ffffff?text=Bar+Chart" alt="Bar chart example" />
+                  <svg viewBox="0 0 400 240" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">
+                    <text x="10" y="25" font-size="13" font-weight="bold" fill="#156d63">Sales by City</text>
+                    <line x1="10" y1="30" x2="390" y2="30" stroke="#e0e0e0" stroke-width="1"/>
+                    <!-- Grid lines -->
+                    <line x1="40" y1="210" x2="380" y2="210" stroke="#e0e0e0" stroke-width="1"/>
+                    <line x1="40" y1="170" x2="380" y2="170" stroke="#e8f8f5" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="130" x2="380" y2="130" stroke="#e8f8f5" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="90" x2="380" y2="90" stroke="#e8f8f5" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="50" x2="380" y2="50" stroke="#e8f8f5" stroke-width="1" stroke-dasharray="2,2"/>
+                    <!-- Y-axis -->
+                    <line x1="40" y1="50" x2="40" y2="210" stroke="#156d63" stroke-width="2"/>
+                    <!-- X-axis -->
+                    <line x1="40" y1="210" x2="380" y2="210" stroke="#156d63" stroke-width="2"/>
+                    <!-- Bars -->
+                    <rect x="60" y="110" width="35" height="100" fill="#156d63" rx="2"/>
+                    <rect x="120" y="80" width="35" height="130" fill="#156d63" rx="2"/>
+                    <rect x="180" y="120" width="35" height="90" fill="#156d63" rx="2"/>
+                    <rect x="240" y="90" width="35" height="120" fill="#156d63" rx="2"/>
+                    <rect x="300" y="140" width="35" height="70" fill="#156d63" rx="2"/>
+                    <!-- Labels -->
+                    <text x="77" y="230" font-size="11" fill="#666" text-anchor="middle">North</text>
+                    <text x="137" y="230" font-size="11" fill="#666" text-anchor="middle">South</text>
+                    <text x="197" y="230" font-size="11" fill="#666" text-anchor="middle">East</text>
+                    <text x="257" y="230" font-size="11" fill="#666" text-anchor="middle">West</text>
+                    <text x="317" y="230" font-size="11" fill="#666" text-anchor="middle">Central</text>
+                  </svg>
                   <figcaption>Bar chart: compare categories like sales by city.</figcaption>
                 </figure>
                 <figure class="visual-card">
-                  <img src="https://placehold.co/420x240/bf5a2a/ffffff?text=Line+Chart" alt="Line chart example" />
+                  <svg viewBox="0 0 400 240" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">
+                    <text x="10" y="25" font-size="13" font-weight="bold" fill="#bf5a2a">Revenue Trend 2024</text>
+                    <line x1="10" y1="30" x2="390" y2="30" stroke="#e0e0e0" stroke-width="1"/>
+                    <!-- Grid lines -->
+                    <line x1="40" y1="210" x2="380" y2="210" stroke="#e0e0e0" stroke-width="1"/>
+                    <line x1="40" y1="170" x2="380" y2="170" stroke="#f0e8e0" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="130" x2="380" y2="130" stroke="#f0e8e0" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="90" x2="380" y2="90" stroke="#f0e8e0" stroke-width="1" stroke-dasharray="2,2"/>
+                    <line x1="40" y1="50" x2="380" y2="50" stroke="#f0e8e0" stroke-width="1" stroke-dasharray="2,2"/>
+                    <!-- Axes -->
+                    <line x1="40" y1="50" x2="40" y2="210" stroke="#bf5a2a" stroke-width="2"/>
+                    <line x1="40" y1="210" x2="380" y2="210" stroke="#bf5a2a" stroke-width="2"/>
+                    <!-- Line chart -->
+                    <polyline points="60,150 110,110 160,130 210,70 260,90 310,50 360,80" fill="none" stroke="#bf5a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Points -->
+                    <circle cx="60" cy="150" r="4" fill="#bf5a2a"/>
+                    <circle cx="110" cy="110" r="4" fill="#bf5a2a"/>
+                    <circle cx="160" cy="130" r="4" fill="#bf5a2a"/>
+                    <circle cx="210" cy="70" r="4" fill="#bf5a2a"/>
+                    <circle cx="260" cy="90" r="4" fill="#bf5a2a"/>
+                    <circle cx="310" cy="50" r="4" fill="#bf5a2a"/>
+                    <circle cx="360" cy="80" r="4" fill="#bf5a2a"/>
+                    <!-- Month labels -->
+                    <text x="60" y="230" font-size="10" fill="#666" text-anchor="middle">Jan</text>
+                    <text x="110" y="230" font-size="10" fill="#666" text-anchor="middle">Feb</text>
+                    <text x="160" y="230" font-size="10" fill="#666" text-anchor="middle">Mar</text>
+                    <text x="210" y="230" font-size="10" fill="#666" text-anchor="middle">Apr</text>
+                    <text x="260" y="230" font-size="10" fill="#666" text-anchor="middle">May</text>
+                    <text x="310" y="230" font-size="10" fill="#666" text-anchor="middle">Jun</text>
+                    <text x="360" y="230" font-size="10" fill="#666" text-anchor="middle">Jul</text>
+                  </svg>
                   <figcaption>Line chart: show trend over time.</figcaption>
                 </figure>
                 <figure class="visual-card">
-                  <img src="https://placehold.co/420x240/0f7d69/ffffff?text=Pie+Chart" alt="Pie chart example" />
+                  <svg viewBox="0 0 400 240" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">
+                    <text x="10" y="25" font-size="13" font-weight="bold" fill="#0f7d69">Market Share</text>
+                    <line x1="10" y1="30" x2="390" y2="30" stroke="#e0e0e0" stroke-width="1"/>
+                    <!-- Pie slices -->
+                    <path d="M 200,120 L 280,80 A 80,80 0 0,1 230,190 Z" fill="#0f7d69" stroke="#fff" stroke-width="2"/>
+                    <path d="M 200,120 L 230,190 A 80,80 0 0,1 130,180 Z" fill="#17a698" stroke="#fff" stroke-width="2"/>
+                    <path d="M 200,120 L 130,180 A 80,80 0 0,1 150,70 Z" fill="#2db8a2" stroke="#fff" stroke-width="2"/>
+                    <path d="M 200,120 L 150,70 A 80,80 0 0,1 280,80 Z" fill="#45d5c4" stroke="#fff" stroke-width="2"/>
+                    <!-- Labels -->
+                    <text x="260" y="95" font-size="12" font-weight="bold" fill="#fff">35%</text>
+                    <text x="155" y="195" font-size="12" font-weight="bold" fill="#fff">25%</text>
+                    <text x="110" y="135" font-size="12" font-weight="bold" fill="#fff">20%</text>
+                    <text x="245" y="55" font-size="12" font-weight="bold" fill="#fff">20%</text>
+                  </svg>
                   <figcaption>Pie chart: show composition of a whole.</figcaption>
                 </figure>
               </div>
