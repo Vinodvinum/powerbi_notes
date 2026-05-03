@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Power BI Content</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;max-width:900px;margin:36px auto;padding:18px;color:#122;line-height:1.5}
+    h1,h2,h3{color:#0b5}
+    section{margin-bottom:28px}
+    pre{white-space:pre-wrap;background:#f7f7f7;padding:12px;border-radius:8px;border:1px solid #eee}
+    nav{position:fixed;right:18px;top:80px;background:#fff;border:1px solid #eee;padding:12px;border-radius:10px;max-height:80vh;overflow:auto}
+    nav a{display:block;margin:6px 0;color:#0a6}
+  </style>
+</head>
+<body>
+  <h1>Power BI - Chapters</h1>
+  <p>Combined chapter content taken from <em>information_reference.txt</em>. Use the nav to jump.</p>
+
+  <nav>
+    <strong>Chapters</strong>
+    <a href="#ch1">1. What is BI & Power BI</a>
+    <a href="#ch2">2. Power BI Interface</a>
+    <a href="#ch3">3. Data Loading</a>
+    <a href="#ch4">4. Power Query Basics</a>
+    <a href="#ch5">5. Data Transformation</a>
+    <a href="#ch6">6. Data Modeling</a>
+    <a href="#ch7">7. Basic Visuals</a>
+    <a href="#ch8">8. Advanced Visuals</a>
+    <a href="#ch9">9. Dashboard Design</a>
+    <a href="#ch10">10. What is DAX</a>
+    <a href="#ch11">11. Aggregations in DAX</a>
+    <a href="#ch12">12. Time Intelligence</a>
+    <a href="#ch13">13. Filters & Context</a>
+    <a href="#ch14">14. Drill-through & Interaction</a>
+    <a href="#ch15">15. Performance Optimization</a>
+    <a href="#ch16">16. Build Full Dashboard</a>
+    <a href="#ch17">17. Storytelling with Data</a>
+    <a href="#ch18">18. Interview Preparation</a>
+  </nav>
+
+  <section id="ch1"><h2>Chapter 1 — What is BI & Power BI</h2>
+    <p>BI = Business Intelligence — using data to make better business decisions. Power BI is a tool to create reports and dashboards from data. Focus on showing totals, top categories, and trends rather than raw rows.</p>
+    <pre>Example:
+order_id\tamount\tcity
+1\t5000\tBangalore
+2\t3000\tMysore
+
+Insight: Total Sales → ₹8000, Top City → Bangalore</pre>
+  </section>
+
+  <section id="ch2"><h2>Chapter 2 — Power BI Interface</h2>
+    <p>Power BI Desktop overview: Fields, Visuals, Filters, and the report canvas. Know where to find panels, how to add visuals, and how filters/slicers affect visuals.</p>
+  </section>
+
+  <section id="ch3"><h2>Chapter 3 — Data Loading</h2>
+    <p>Import Excel/CSV, connect to databases, preview data, and choose appropriate data types before loading.</p>
+  </section>
+
+  <section id="ch4"><h2>Chapter 4 — Power Query Basics</h2>
+    <p>Cleaning steps: remove nulls, change data types, trim text. Use the Applied Steps pane and preview changes.</p>
+  </section>
+
+  <section id="ch5"><h2>Chapter 5 — Data Transformation</h2>
+    <p>Split/merge columns, pivot/unpivot, and create calculated columns when necessary. Prefer transformations in Power Query when possible.</p>
+  </section>
+
+  <section id="ch6"><h2>Chapter 6 — Data Modeling</h2>
+    <p>Relationships (joins), star schema, fact vs dimension tables. Keep granularity consistent and avoid many-to-many unless required.</p>
+  </section>
+
+  <section id="ch7"><h2>Chapter 7 — Basic Visuals</h2>
+    <p>Bar, line, pie, and table visuals. Choose visuals based on story: trend = line, composition = stacked bar, top N = bar.</p>
+  </section>
+
+  <section id="ch8"><h2>Chapter 8 — Advanced Visuals</h2>
+    <p>KPI cards, maps, drill-down, and slicers. Use bookmarks and custom visuals when built-ins are insufficient.</p>
+  </section>
+
+  <section id="ch9"><h2>Chapter 9 — Dashboard Design</h2>
+    <p>Layout, color usage, and business storytelling. Focus on the end-user question and place the most important KPI top-left.</p>
+  </section>
+
+  <section id="ch10"><h2>Chapter 10 — What is DAX</h2>
+    <p>Difference between calculated columns and measures. Measures are evaluated at query time and are the preferred way to compute aggregations.</p>
+  </section>
+
+  <section id="ch11"><h2>Chapter 11 — Aggregations in DAX</h2>
+    <p>Basic functions: SUM, COUNT, AVERAGE, and CALCULATE for context modification.</p>
+  </section>
+
+  <section id="ch12"><h2>Chapter 12 — Time Intelligence</h2>
+    <p>YTD, MTD, period-over-period. Use a proper Date table and mark it as Date in the model.</p>
+  </section>
+
+  <section id="ch13"><h2>Chapter 13 — Filters & Context</h2>
+    <p>Row context vs filter context; understand how slicers and filters change measures.</p>
+  </section>
+
+  <section id="ch14"><h2>Chapter 14 — Drill-through & Interaction</h2>
+    <p>Cross filtering, drill-down, and drill-through setup allow users to explore details from summary views.</p>
+  </section>
+
+  <section id="ch15"><h2>Chapter 15 — Performance Optimization</h2>
+    <p>Optimize data model: remove unused columns, reduce cardinality, prefer measures over calculated columns when possible.</p>
+  </section>
+
+  <section id="ch16"><h2>Chapter 16 — Build Full Dashboard</h2>
+    <p>Hands-on: Sales dashboard with totals, trends, top products, and geographic map. Iteratively refine with stakeholders.</p>
+  </section>
+
+  <section id="ch17"><h2>Chapter 17 — Storytelling with Data</h2>
+    <p>How to present insights and write the narrative for business audiences. Lead with the answer and show evidence.</p>
+  </section>
+
+  <section id="ch18"><h2>Chapter 18 — Interview Preparation</h2>
+    <p>Common questions, project explanations, and how to describe your role in building dashboards and models.</p>
+  </section>
+
+</body>
+</html>
